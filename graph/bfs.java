@@ -1,58 +1,49 @@
 import java.util.*;
 class bfs
-{int size = 0;
- LinkedList<Integer> linklistarray[];
+{
+	int size = 0;
+ 	ArrayList<ArrayList<Integer>> al = new ArrayList<ArrayList<Integer>>();
+
 	bfs(int size)
 	{
 		this.size = size;
-		linklistarray = new LinkedList[size];
-
 		for(int i=0;i<size;i++)
 		{
-		 linklistarray[i] = new LinkedList<Integer>();
-		}
-
-
-	}
-
-	void addEdge(int source,int destination)
-	{
-		linklistarray[source].add(destination);
-	}
-
-	void print()
-	{
-		for(int i=0;i<size;i++)
-		{
-			System.out.println(linklistarray[i]);
+		 	al.add(new ArrayList<>());
 		}
 	}
 
-	void breadthSearch(int start)
+	void addEdge(int src,int des)
+	{
+		al.get(src).add(des);
+	}
+
+
+	void breadthSearch(int src)
 	{
 		boolean visited[] = new boolean[size];
 
-		Queue<Integer> q = new LinkedList<>();
+		Queue<Integer> q = new LinkedList<Integer>();
 
-		q.add(start);
-		visited[start] = true;
+		q.add(src);
 
-		while(!q.isEmpty())
+		while(q.size()>0)
 		{
 			int temp = q.poll();
-			System.out.print(temp+" ");
 
-			Iterator<Integer> z = linklistarray[temp].iterator();
-			while(z.hasNext())
+			System.out.println(temp);
+			visited[temp] = true;
+
+			for(int i:al.get(temp))
 			{
-				int n = z.next(); 
-                if (!visited[n]) 
-                { 
-                    visited[n] = true; 
-                    q.add(n); 
-                } 
+				if(!visited[i])
+				{
+					q.add(i);
+				}
+
 			}
 		}
+
 	}
 	public static void main(String args[])
 	{
@@ -65,7 +56,7 @@ class bfs
         g.addEdge(2, 3); 
         g.addEdge(3, 3); 
 
-        g.print();
+    
 
         g.breadthSearch(2);
 

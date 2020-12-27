@@ -229,8 +229,8 @@ int min_right(Node root)
 		avl.add(0);
 
 		avl.print();
-		avl.delete(8);
-		System.out.println("After Deletion");
-		avl.print();
+		// avl.delete(8);
+		// System.out.println("After Deletion");
+		// avl.print();
 	}
 }

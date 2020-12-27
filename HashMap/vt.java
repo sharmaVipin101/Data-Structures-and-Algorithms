@@ -35,15 +35,19 @@ class vt
 		
 
 	}
+
 	static void  printVertical(Node root)
 	{
 		Map<Integer,List<Integer>> map = new TreeMap<>();
 
 		printVertical(root,0,map);
 
-		for(Collection<Integer> c: map.values())
-			System.out.println(c);
+		// for(Integer c: map.values())
+		// 	System.out.println(c);
 
+		if (map != null) { 
+            System.out.println(map.entrySet()); 
+        } 
 
 
 	}

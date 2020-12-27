@@ -118,9 +118,9 @@ class avlTreeInsertion
 		{
 			if(root!=null)
 			{
-				System.out.print(root.data+" ");
+				
 			print_rec(root.left);
-			
+			System.out.print(root.data+" ");
 			print_rec(root.right);
 			}
 
@@ -131,13 +131,15 @@ class avlTreeInsertion
 	{
 		avlTreeInsertion avl = new avlTreeInsertion();
 
-		avl.add(1);
-		avl.add(2);
-		avl.add(3);
-		avl.add(4);
-		avl.add(5);
+				avl.add(8);
 		avl.add(6);
+		avl.add(2);
 		avl.add(7);
+		avl.add(9);
+		avl.add(5);
+		avl.add(3);
+		avl.add(1);
+		avl.add(0);
 
 		avl.print();
 	}
