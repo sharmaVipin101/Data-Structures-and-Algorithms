@@ -1,2 +1,2 @@
 # Data-Structures and Algorithms 
-I love to solvve dsa questions.
+I love to solve dsa questions.
