@@ -1,2 +1,2 @@
-# data-structures
-Algorithms and some codes.
+# Data-Structures and Algorithms 
+I like to solve coding questions.
